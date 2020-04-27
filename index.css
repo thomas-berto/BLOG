@@ -1,0 +1,109 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: transparent; 
+
+}
+
+
+main{
+	
+    font-size: 17px;
+    padding: 4%;
+    
+}
+h1{text-align: center;}
+section{padding:1% ;}
+
+div{
+    padding:1%;
+}
+header{
+    display: flex;
+flex-direction: row; 
+justify-content: space-evenly;
+
+}
+#menu ul {
+ margin:0;
+ padding:0;
+ list-style-type:none;
+ text-align:center;
+ display: flex;
+flex-direction: row;
+ }
+#menu li {
+ background-color:black;
+ margin-left: 12%;
+
+
+ }
+#menu li a {
+ display:block;
+ width:100px;
+ color:white;
+ text-decoration:none;
+ padding:5px;
+ }
+#menu li a:hover {
+ color:#FFD700;}
+ #menu ul li ul {
+    display:none;
+    }
+#menu ul li:hover ul {
+        display:block;
+        }
+#menu li:hover ul li {
+        float:none;
+        }   
+        #menu li ul {
+            position:absolute;
+            }
+
+
+.page{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.versement{
+box-shadow:16px 16px 11px rgb(160, 160, 160)	;
+background-color: rgb(240, 239, 239)	;
+padding: 2%;
+border-radius: 15%;
+display: flex;
+flex-direction: row;
+padding: 2%;
+}
+.art{
+    margin-left: 8%;
+}
+.im{
+    height: 120px;
+    width: 160px;
+        
+}
+
+.page{
+display: inline-table;
+margin-left: 3%;
+}
+h2
+{ 
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.imge
+{
+justify-content: center;
+}
+.img
+{
+width: auto;
+height: auto;
+margin-left: 37%;
+
+}
