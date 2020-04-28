@@ -5,19 +5,16 @@
 		<title>Inscription</title>
 	</head>
 	<body>
-		
-		<header>
-			<nav>
-				<ul>
-					<?php include('header.php');
-					if(isset($_SESSION['login']) || isset($_SESSION['pass']))
-					{
-						header('Location: index.php');
-					}
-					?>
-					</ul>
-				 </nav>
+        <header class="topnav">
+			<nav id="menu">
+                <ul> <?php include('header.php');
+                if(isset($_SESSION['login']) || isset($_SESSION['pass']))
+                {
+                    header('Location: index.php');
+                }
+                ?></ul>				
 		</header>
+
 		
 		<main>
 			<section>
@@ -75,6 +72,7 @@
                 header('Location: connexion.php');
                  }
             }
+        
 
 
 ?>

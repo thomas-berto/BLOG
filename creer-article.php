@@ -5,11 +5,29 @@
 		<title>nvxtopics</title>
 	</head>
 	<body>
-		<header>
-			<nav>
-				 <ul> <?php include('header.php') ?></ul>
-			</nav> 
-        </header>
+    <header class="topnav">
+			<nav id="menu">
+                <ul> <?php include('header.php') ;
+                if (isset($_SESSION['login']))
+                {
+                    $login=$_SESSION['login'];
+                    $sql = "SELECT * FROM utilisateurs WHERE login = '$login'";  
+                    $req = mysqli_query($connexion,$sql);
+                    $data = mysqli_fetch_array($req);
+                    if($data['id_droits'] == 1337 OR $data['id_droits'] == 42 )
+                    {
+
+                    }
+                    else{
+                        header('Location: index.php');
+                    }
+                }
+                else
+                {
+                    header('Location: index.php');
+                }
+                ?></ul>				
+		</header>
 
         <main>
             <section>
@@ -18,10 +36,8 @@
                     <fieldset>
                         <legend>article</legend>
                         <input  required type="text" name="titre" size="50" placeholder="titre"/>
-                        <textarea required placeholder="article"   name="article"></textarea>
                         <input type="texte" name="image" value="blog.jpg" placeholder="lien dossier image"/>
-
-
+                        <textarea row="500" cols="100" required placeholder="article"   name="article"></textarea>
                         <select name="ctg">
                            <legend>Catégories ?</legend>
 
@@ -57,13 +73,15 @@
                         $ctg2 = mysqli_query($connexion,$ctg);
                         $fetch = mysqli_fetch_array($ctg2);
 
-                        $article=nl2br($_POST["article"]);
+                        $article=$_POST["article"];
                         $titre=$_POST["titre"];
                         $categori=$fetch["id"];
                         $image=$_POST["image"];
                         $inser = "INSERT INTO `articles` (id,titre,article,image,id_utilisateur,id_categorie,date) 
                         VALUES (NULL,'".$titre."','".$article."','".$image."','".$id."','".$categori."', now())"; 
                         $query = mysqli_query($connexion, $inser);
+                        header('Location: index.php');
+
                     }
                     ?>
             </section>

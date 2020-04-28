@@ -12,23 +12,25 @@
 		<main>
 
 		 <?php
-		 		$login=$_SESSION["login"];
                 $connexion = mysqli_connect("localhost", "root", "", "blog");
 				$uti = 'SELECT * FROM articles WHERE id="'.$_GET['id'].'" ';
 				$uti2 = mysqli_query($connexion,$uti);
 				while ($data = mysqli_fetch_array($uti2))
                            {
 							   echo'<h1 class="ha">'.$data["titre"].'</h1>';
+			
 							   echo'<aside class="imge"><img class="img" src="'.$data['image'].'"/></aside>'; 
 							   echo'<section class="versement">';
-							   echo'<article>'.$data["article"].'</article>';
-							   echo'<article>'.$data["date"].'</article>';
-							   echo'</article></section>';
+							   echo'<article><p>'.nl2br($data["article"]).'</p>';
+							   echo'<p>'.$data["date"].'</p></article>';
+							   echo'</section>';
 						   }
 		?>
-
-             
-		
+<div class="act">
+                        
+						<?php include('Commentaire.php') ?>
+				
+</div>
 </main>
        
 	   </body>

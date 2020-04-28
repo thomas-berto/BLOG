@@ -18,11 +18,13 @@ if (isset($_SESSION['login'])):
         {
             if($data['id_droits'] == 42 )
             {
-            echo '<li><a href="creer-article.php">creer</a></li>';
+            echo '<li><a href="creer-article.php">Article</a></li>';
             }
             elseif($data['id_droits'] == 1337 )
             {
-                echo '<li><a href="admin.php">admin</a></li>';
+                echo '<li><a href="admin.php">Admin</a></li>';
+                echo '<li><a href="creer-article.php">Article</a></li>';
+
             }
         }
                
@@ -33,10 +35,10 @@ if (isset($_SESSION['login'])):
 $sql2 = "SELECT * FROM categories ";  
 $req2 = mysqli_query($connexion,$sql2);
 while ($dataa = mysqli_fetch_array($req2))
-{
+{ 
 echo'
-<ul >
-    <li><a href="">'.$dataa['nom'].'</a></li>'
+<ul>
+    <li><<a href="index.php?ctg=' , $dataa['id'] , '">'.$dataa['nom'].'</a></li>'
  ;
 }
 ?> </ul></li> 
@@ -60,9 +62,9 @@ $req2 = mysqli_query($connexion,$sql2);
 while ($dataa = mysqli_fetch_array($req2))
 {
 echo'
-<ul >
-    <li><a href="">'.$dataa['nom'].'</a></li>'
- ;
+<ul>
+<li><<a href="index.php?ctg=' , $dataa['id'] , '">'.$dataa['nom'].'</a></li>'
+;
 }
 ?> </ul></li> 
     

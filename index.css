@@ -12,17 +12,23 @@ main{
     
 }
 h1{text-align: center;}
-section{padding:1% ;}
+
+section
+{padding:1% ;
+}
 
 div{
     padding:1%;
 }
 header{
     display: flex;
-flex-direction: row; 
-justify-content: space-evenly;
+flex-direction: column; 
+justify-content: space-around;
 
 }
+.tete
+{
+float: right;}
 #menu ul {
  margin:0;
  padding:0;
@@ -33,7 +39,7 @@ flex-direction: row;
  }
 #menu li {
  background-color:black;
- margin-left: 12%;
+ margin-left: 8%;
 
 
  }
@@ -106,4 +112,44 @@ width: auto;
 height: auto;
 margin-left: 37%;
 
+}
+
+.container {
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 2px;
+    padding: 5px;
+    margin: 5px ;
+  }
+  .container::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .container p {
+    float: left;
+margin: auto;
+    width: auto;
+    margin-right: 20px;
+  }
+  .time {
+    float: right;
+    color: #aaa;
+  }
+  .id
+  {
+    float: left;
+    color: tomato;
+    font-size: 1,2em;
+    text-transform: uppercase;
+font-family: monospace;  }
+  
+.act
+{
+padding: 4%;
+}
+
+.des
+{
+ padding: 10%;
 }

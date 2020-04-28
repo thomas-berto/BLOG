@@ -6,13 +6,10 @@
     </head>
     <body class="connexion">
 
-        <header class="menu">
-            <nav>
-                <ul>
-                    <?php include('header.php') ?>
-                </ul>
-            </nav>
-        </header>
+    <header class="topnav">
+			<nav id="menu">
+				<ul> <?php include('header.php') ?></ul>				
+		</header>
 
         <main>
             <?php
