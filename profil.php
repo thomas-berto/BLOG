@@ -16,10 +16,8 @@
 					?></ul>				
 		</header>
 		<main>
-		    <article>
 			    <h1>Modification profil</h1>
-            </article>
-            <article>
+            <section>
                 <form class="forme" action="" method="post">
                     <fieldset>
                         <legend>Identifiants</legend>
@@ -38,7 +36,7 @@
                         </label>
                             <input type="submit" value="modif" name="modifier"/>
                 </form>
-            </article>
+            </section>
 			<?php
 			$login=$_SESSION['login'];
 			$connexion = mysqli_connect("localhost", "root", "", "blog");
@@ -68,3 +66,14 @@
                             }
                         }
                         ?>
+		</main>
+
+		<footer>
+		<?php include('footer.php') ?>
+		    <section>
+		    Tout droit réserver . 2020 
+		    </section>
+
+		</footer>
+	</body>
+</html>

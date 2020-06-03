@@ -29,9 +29,9 @@
                              <input type="text" name="login"  placeholder="login"required/>
                              <label for="password">Mot de Passe :</label>
                              <input type="password" name="pass"  placeholder="mot de passe"required/>
+						     <input type="submit" value="Connexion" name="Connexion"required/>
 					    </fieldset>
-						      <input type="submit" value="Connexion" name="Connexion"required/>
-					
+
 			        </form>
 
 			    </article>
@@ -63,6 +63,13 @@
                     ?>
             </section>
         </main>
+        <footer>
+		<?php include('footer.php') ?>
+		<section>
+		Tout droit réserver . 2020 
+		</section>
+
+		</footer>
        
     </body>
 </html>

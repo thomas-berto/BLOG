@@ -26,6 +26,17 @@ flex-direction: column;
 justify-content: space-around;
 
 }
+footer
+{
+  background-color: black;
+  flex-direction: column; 
+  color: white;
+  display: flex;
+  justify-content: space-between;
+
+
+
+}
 .tete
 {
 float: right;}
@@ -149,7 +160,47 @@ font-family: monospace;  }
 padding: 4%;
 }
 
-.des
-{
- padding: 10%;
+
+input[type=submit] {
+  box-shadow:1px 1px 1px rgb(179, 179, 179);
+  cursor:pointer;
+  border:none;
+  
+ 
+ 
+  }
+ 
+ 
+ fieldset {
+   border: thin solid white;
+   margin: 0 auto;
+   padding: 2em;
+   width: 75%;
+  margin-bottom:10px;
+  border:1px solid rgb(0, 0, 0);
+   
+ }
+ 
+ 
+ label {
+  margin-top:10px;
+  display:block;
+  }
+ 
+ legend {
+   text-align: center;
+   text-transform: uppercase;
+   margin-bottom: .5em;
+   width: 100%;
+   color:#fff;
+   background-color:rgb(128, 128, 128);
+   border:2px solid gray; 
+   border-radius:8px; 
+
+ }
+
+form label{
+  font-size:16px;
+  color:black;
+  transition: all 0.5s ease-in-out;
 }

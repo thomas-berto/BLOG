@@ -38,9 +38,10 @@
                 <form  class="forme"method="post">
                     <fieldset>
                         <legend>Nouvelle catégorie</legend>
-                        <input  required type="text" name="titre" size="50" placeholder="titre"/>
-                    </fieldset>
+                        <input  required type="text" name="titre" size="50" placeholder="titre"/> 
                         <input type="submit" name="go" value="Poster"/>
+
+                    </fieldset>
 	            </form>
             <?php
             if(isset($_POST["go"]))
@@ -135,3 +136,17 @@
                             echo'<p class="bug">modifier avec succés</p>';
 
                         }
+                        ?>
+
+            </section>
+        </main> 
+    <footer>
+        <?php include('footer.php') ?>
+            <section>
+            Tout droit réserver . 2020 
+            </section>
+                
+    </footer>
+</body>
+</html>
+                   

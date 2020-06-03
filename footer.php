@@ -1,7 +1,8 @@
+<nav id="menu">
 <ul>
 <?php
-session_start();
 $connexion = mysqli_connect("localhost", "root", "", "blog");
+
 
 if (isset($_SESSION['login'])):
     $login=$_SESSION['login'];
@@ -9,7 +10,7 @@ if (isset($_SESSION['login'])):
     $req = mysqli_query($connexion,$sql);
 
 	?>
-
+            <ul>
                 <li><a href="index.php">Acceuil</a></li>
                 <li><a href="profil.php">Profil</a></li>
                 
@@ -30,7 +31,7 @@ if (isset($_SESSION['login'])):
         }
                
     ?>
-    <li> <a href="#">Categories</a>
+    <li><a href="#">Categories</a>
 <?php
 
 $sql2 = "SELECT * FROM categories ";  
@@ -39,7 +40,7 @@ while ($dataa = mysqli_fetch_array($req2))
 { 
 echo'
 <ul>
-    <li><<a href="index.php?ctg=' , $dataa['id'] , '">'.$dataa['nom'].'</a></li>'
+    <li><a href="index.php?ctg=' , $dataa['id'] , '">'.$dataa['nom'].'</a></li>'
  ;
 }
 ?> </ul></li> 
@@ -71,24 +72,6 @@ echo'
     
 
  
-<?php endif;
-if (isset($_SESSION['login']))
-{
-    ?>
+<?php endif;?>        
 
-   <form action="index.php" class='head' method="post">
-             <li><input type="submit" name='deconnexion' class="deco" value="deconnexion"/></li>
-        </form>
-    
-
-<?php if (isset($_POST['deconnexion'])) {
-                session_unset();
-                session_destroy();
-                header('Location:index.php');
-            }
-        }
-            ?>
-            </ul>
-
-
-
+</ul></nav>

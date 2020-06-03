@@ -1,6 +1,6 @@
 <?php	
                           $id=$_GET['id'];
-                        $limite = 6;
+                        $limite = 5;
                         if (isset($_GET["page"]))
                         {
                             $page  = $_GET["page"];

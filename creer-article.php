@@ -59,8 +59,9 @@
                            ?>
 
                         </select>
-                    </fieldset>
                         <input type="submit" name="go" value="Poster"/>
+                    </fieldset>
+
                 </form>
 
                     <?php
@@ -86,6 +87,14 @@
                     ?>
             </section>
         </main>
+
+        <footer>
+		    <?php include('footer.php') ?>
+		    <section>
+		    Tout droit réserver . 2020 
+		    </section>
+
+		</footer>
        
     </body>
 </html>

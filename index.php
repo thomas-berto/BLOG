@@ -7,7 +7,8 @@
 	<body>
 		<header class="topnav">
 			<nav id="menu">
-				<ul> <?php include('header.php') ?></ul>				
+				<?php include('header.php') ?>	
+            </nav>			
 		</header>
 		<main>
 
@@ -83,7 +84,14 @@
 
              
 
-        </main>
+        </main> 
+	    <footer>
+		<?php include('footer.php') ?>
+		<section>
+		Tout droit réserver . 2020 
+		</section>
+
+		</footer>
        
     </body>
 </html>

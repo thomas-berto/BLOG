@@ -32,10 +32,11 @@
 				        <label>confirmation :
                             <input type="password" minlength="4"  name="passe2" required placeholder="confirmation"/></label>	
                             <input type="hidden"	value="1" name="droits"/>
-                    </fieldset>   
                         <label>
 			                <input type="checkbox" name="condition" required placeholder="condition"/> <a href="">J'accepte les conditions générales d'utilisation.</a></label>
-							<input type="submit" value="inscription" name="inscription"/>
+                            <input type="submit" value="inscription" name="inscription"/> 
+                    </fieldset>   
+
                 </form>
             </section>    
 
@@ -80,7 +81,12 @@
             </section>
 
         </main>
-        <footer>
+        
+    <footer>
+		<?php include('footer.php') ?>
+		<section>
+		  Tout droit réserver . 2020 
+		</section>
 				
 	</footer>	
 </body>
