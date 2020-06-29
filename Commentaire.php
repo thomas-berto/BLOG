@@ -1,5 +1,5 @@
 <?php	
-                          $id=$_GET['id'];
+                        $id=$_GET['id'];
                         $limite = 5;
                         if (isset($_GET["page"]))
                         {

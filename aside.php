@@ -12,7 +12,8 @@ if (isset($_SESSION['login']))
 </section>
     
 
-<?php if (isset($_POST['deconnexion'])) {
+<?php if (isset($_POST['deconnexion']))
+            {
                 session_unset();
                 session_destroy();
                 header('Location:index.php');

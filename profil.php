@@ -24,7 +24,7 @@
                         <label>Login :
                             <input type="text" disabled  value="<?php echo $_SESSION['login']  ?>" name="login" maxlength="8"  required placeholder="login"/></label>
 						<label>Email :
-                            <input type="email" name="email"  size="30" value="" pattern=".+@gmail.com" 
+                            <input type="email" name="email"  size="30" value="" : 
                              placeholder="ex:toto@gmail.com"/></label>
 						<label>Mot de passe :
                             <input type="password" name="passe" minlength="4"  placeholder=" new password"/></label>
@@ -69,7 +69,7 @@
 		</main>
 
 		<footer>
-		<?php include('footer.php') ?>
+   		<?php include('footer.php') ?>
 		    <section>
 		    Tout droit réserver . 2020 
 		    </section>
